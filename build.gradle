@@ -28,3 +28,13 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.named('bootJar') {
+    // Define a estratégia para lidar com duplicatas de arquivos.
+    // 'EXCLUDE' (excluir) garante que ele não inclua arquivos MANIFEST.MF das dependências,
+    // usando apenas o gerado pelo Spring Boot para a aplicação principal.
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+// Importa a classe DuplicatesStrategy para que o código acima funcione
+import org.gradle.api.file.DuplicatesStrategy

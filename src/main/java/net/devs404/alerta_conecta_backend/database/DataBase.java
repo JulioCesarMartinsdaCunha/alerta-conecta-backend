@@ -1,17 +1,23 @@
 package net.devs404.alerta_conecta_backend.database;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DataBase
 {
-    private static final int port = 3306;
-    private static final String database_name = "alertacon";
+    @Value("${spring.datasource.url}")
+    private static String url;
 
-    private static final String URL = "jdbc:mysql://localhost:" + port + "/"+database_name;
-    private static final String USER = "root";
-    private static final String PASS = "";
+    // O nome de usuário resolvido
+    @Value("${spring.datasource.username}")
+    private static String user;
+
+    // A senha resolvida
+    @Value("${spring.datasource.password}")
+    private static String password;
 
     public static Connection connect()
     {
@@ -19,7 +25,7 @@ public class DataBase
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connect = DriverManager.getConnection(URL, USER, PASS);
+            connect = DriverManager.getConnection(url, user, password);
         }
         catch (SQLException | ClassNotFoundException e)
         {
