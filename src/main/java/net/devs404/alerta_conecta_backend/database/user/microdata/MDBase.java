@@ -1,10 +1,10 @@
-package net.devs404.alerta_conecta_backend.database.microdata;
+package net.devs404.alerta_conecta_backend.database.user.microdata;
 
 import net.devs404.alerta_conecta_backend.database.DataBase;
-import net.devs404.alerta_conecta_backend.database.microdata.entity.Bairro;
-import net.devs404.alerta_conecta_backend.database.microdata.entity.Cargo;
-import net.devs404.alerta_conecta_backend.database.microdata.entity.Cidade;
-import net.devs404.alerta_conecta_backend.database.microdata.entity.Estado;
+import net.devs404.alerta_conecta_backend.database.user.microdata.entity.Bairro;
+import net.devs404.alerta_conecta_backend.database.user.microdata.entity.Cargo;
+import net.devs404.alerta_conecta_backend.database.user.microdata.entity.Cidade;
+import net.devs404.alerta_conecta_backend.database.user.microdata.entity.Estado;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,4 +1,4 @@
-package net.devs404.alerta_conecta_backend.database.entity;
+package net.devs404.alerta_conecta_backend.database.user.entity;
 
 public class StatusCorporal
 {

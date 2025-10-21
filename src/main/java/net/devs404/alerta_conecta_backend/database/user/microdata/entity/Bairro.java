@@ -1,4 +1,4 @@
-package net.devs404.alerta_conecta_backend.database.microdata.entity;
+package net.devs404.alerta_conecta_backend.database.user.microdata.entity;
 
 public class Bairro
 {

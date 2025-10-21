@@ -1,6 +1,6 @@
-package net.devs404.alerta_conecta_backend.database.entity;
+package net.devs404.alerta_conecta_backend.database.user.entity;
 
-import net.devs404.alerta_conecta_backend.database.microdata.entity.Cargo;
+import net.devs404.alerta_conecta_backend.database.user.microdata.entity.Cargo;
 
 import java.sql.Date;
 
@@ -33,6 +33,9 @@ public class Funcionario
 
         this.dataNasc = dateBorn;
     }
+
+    public Funcionario()
+    {}
 
     public void promoteRole(Cargo newRole)
     {
