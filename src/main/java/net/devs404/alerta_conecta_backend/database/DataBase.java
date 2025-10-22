@@ -25,6 +25,8 @@ public class DataBase
         Connection connect;
         try
         {
+            System.out.println("URL: "+URL + "\nUSER: "+USER+"\nPASS: "+PASS);
+
             Class.forName("com.mysql.cj.jdbc.Driver");
             connect = DriverManager.getConnection(URL, USER, PASS);
         }
