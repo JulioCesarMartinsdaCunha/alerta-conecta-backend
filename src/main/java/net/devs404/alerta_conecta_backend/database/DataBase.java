@@ -1,5 +1,6 @@
 package net.devs404.alerta_conecta_backend.database;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -11,15 +12,24 @@ import java.sql.SQLException;
 public class DataBase
 {
     @Value("${spring.datasource.url}")
-    private static String URL;
+    private String url;
 
-    // O nome de usuário resolvido
     @Value("${spring.datasource.username}")
-    private static String USER;
+    private String user;
 
-    // A senha resolvida
     @Value("${spring.datasource.password}")
+    private String pass;
+
+    private static String URL;
+    private static String USER;
     private static String PASS;
+
+    @PostConstruct
+    public void init() {
+        URL = url;
+        USER = user;
+        PASS = pass;
+    }
 
     public static Connection connect()
     {
