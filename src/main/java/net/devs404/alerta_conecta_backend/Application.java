@@ -9,7 +9,7 @@ public class Application
 {
     public static void main(String[] args)
     {
-        new GUIMain();
+        //new GUIMain();
         SpringApplication.run(net.devs404.alerta_conecta_backend.Application.class, args);
     }
 }

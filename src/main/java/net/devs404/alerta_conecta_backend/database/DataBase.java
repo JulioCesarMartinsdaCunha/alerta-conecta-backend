@@ -6,18 +6,19 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 public class DataBase
 {
     @Value("${spring.datasource.url}")
-    private static String url;
+    private static String URL;
 
     // O nome de usuário resolvido
     @Value("${spring.datasource.username}")
-    private static String user;
+    private static String USER;
 
     // A senha resolvida
     @Value("${spring.datasource.password}")
-    private static String password;
+    private static String PASS;
 
     public static Connection connect()
     {
@@ -25,7 +26,7 @@ public class DataBase
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connect = DriverManager.getConnection(url, user, password);
+            connect = DriverManager.getConnection(URL, USER, PASS);
         }
         catch (SQLException | ClassNotFoundException e)
         {
